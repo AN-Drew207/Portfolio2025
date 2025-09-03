@@ -46,7 +46,7 @@ export const Projects = () => {
   ];
 
   return (
-    <div className="flex flex-col bg-[#1a1a1a] justify-center items-center w-full py-24 md:px-36 sm:px-10 px-2 gap-16">
+    <div className="flex flex-col bg-[#1a1a1a] justify-center items-center w-full py-24 xl:px-36 md:px-10 sm:px-8 px-2 gap-16">
       <h2 className="flex text-center  md:text-4xl text-2xl titleLogo text-primary whitespace-nowrap">
         <span className="text-white font-bold pr-2">{"< "}</span>
         <Typewriter
@@ -67,7 +67,7 @@ export const Projects = () => {
         />
         <span className="text-white font-bold">{" / >"}</span>
       </h2>
-      <div className="sm:w-2/3 w-full">
+      <div className="lg:!w-2/3 w-full">
         <Swiper
           slidesPerView={1}
           autoplay={{

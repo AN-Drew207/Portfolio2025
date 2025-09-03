@@ -33,7 +33,7 @@ export const SidebarMobile: React.FC<LayoutDashboardProps & any> = ({
         <Dialog
           as="div"
           static
-          className="fixed h-screen top-0 right-0 pt-14 flex z-40 md:hidden bg-overlay"
+          className="fixed h-screen top-0 right-0 pt-14 flex z-40 md:hidden bg-gray-900"
           open={sidebarOpen}
           onClose={setSidebarOpen}
           initialFocus={initialFocus}
@@ -58,7 +58,7 @@ export const SidebarMobile: React.FC<LayoutDashboardProps & any> = ({
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-[-300px]"
           >
-            <div className="bg-overlay relative flex-1 flex flex-col max-w-xs w-full w-64">
+            <div className="bg-overlay relative flex-1 flex flex-col max-w-xs w-40">
               <Transition.Child
                 as={Fragment}
                 enter="ease-in-out duration-300"
@@ -68,7 +68,7 @@ export const SidebarMobile: React.FC<LayoutDashboardProps & any> = ({
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <div className="absolute top-0 left-[-50px] pt-2">
+                <div className="absolute hidden top-0 left-[-50px] pt-2">
                   <button
                     className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                     onClick={() => setSidebarOpen(false)}
@@ -86,14 +86,20 @@ export const SidebarMobile: React.FC<LayoutDashboardProps & any> = ({
                   {navItems.map((item: any, index: number) => {
                     return item.link ? (
                       <Fragment key={"nav-mobile-" + index}>
-                        <Link href={item.link} key={"nav-desktop-" + index}>
+                        <Link
+                          href={item.link}
+                          key={"nav-desktop-" + index}
+                          onClick={() => setSidebarOpen(false)}
+                        >
                           <p
                             className={clsx(
                               "group flex items-center px-3 py-4 font-bold hover:opacity-90 text-md rounded-md  relative ",
                               {
                                 "text-white": item.link !== router.asPath,
                               },
-                              { "text-primary": item.link === router.asPath },
+                              {
+                                "!text-[#9b1b17]": item.link === router.asPath,
+                              },
                             )}
                             onClick={() => setSidebarOpen(false)}
                           >
@@ -107,6 +113,7 @@ export const SidebarMobile: React.FC<LayoutDashboardProps & any> = ({
                         <a
                           href={item.externalLink}
                           key={"nav-desktop-" + index}
+                          onClick={() => setSidebarOpen(false)}
                         >
                           <p
                             className={clsx(
@@ -114,7 +121,9 @@ export const SidebarMobile: React.FC<LayoutDashboardProps & any> = ({
                               {
                                 "text-white": item.link !== router.asPath,
                               },
-                              { "text-primary": item.link === router.asPath },
+                              {
+                                "!text-[#9b1b17]": item.link === router.asPath,
+                              },
                             )}
                             onClick={() => setSidebarOpen(false)}
                           >

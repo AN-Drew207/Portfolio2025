@@ -18,7 +18,7 @@ export const ProjectItem: React.FC<any> = ({
         className={clsx(
           className,
           "flex flex-col items-center justify-center border-[0.25px] border-[#555] rounded-lg",
-          { ["hover:scale-[105%] xl:w-[800px] sm:w-[500px] w-full"]: hover },
+          { ["hover:scale-[105%] xl:w-[800px] lg:w-[500px] w-full"]: hover },
           { ["w-full"]: !hover },
           "transition-all duration-500  overflow-hidden cursor-pointer relative",
         )}
@@ -29,7 +29,7 @@ export const ProjectItem: React.FC<any> = ({
           <div className="flex items-center justify-center md:text-2xl text-sm text-[#b10600] font-[500]">
             {name}
           </div>
-          <div className="text-[14px] text-white w-full text-center px-10">
+          <div className="sm:!text-[14px] sm:!block hidden text-[10px] text-white w-full text-center sm:px-10">
             {description}
           </div>
         </div>
