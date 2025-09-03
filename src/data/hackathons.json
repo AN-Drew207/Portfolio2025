@@ -1,0 +1,85 @@
+[
+	{
+		"name": "C3 Blockchain (Best Overall Winner)",
+		"link": "hackathons/c3",
+		"liveDemo": "https://c3-blockchain.vercel.app/",
+		"hackathonPage": "https://ethglobal.com/showcase/c3-blockchain-cnyv7",
+		"image": "/img/c3.png",
+		"codeDescription": {
+			"paragraphs": [
+				{
+					"text": "C3 blockchain consists in a L2 blockchain base in the OP Stack with Goerli as L1, where we modified the core of the EVM where gas fees implementation is located. Only users with a WorldID (as a proof of personhood) can get fees from their smart contracts. All of this allows smart contracts builders to obtain revenue from the use of their smart contracts. This solves the issue of public goods or projects such as Safe not having a solid revenue source."
+				},
+				{
+					"text": "This project is a OP Stack hack/modification (op-geth, op-node, op-batcher, etc...) as a base of the blockchain and Worldcoin as a proof of personhood, we are getting to data from the Worldcoin Ethereum Contract. "
+				},
+				{
+					"text": "In the frontend we are using Next.js 13, Typescript and TailwindCSS to build the landing page and the app that shows the tracking of the smart contracts with the most gas fees earned."
+				}
+			]
+		}
+	},
+	{
+		"name": "DAO Factoring",
+		"link": "hackathons/dao_factoring",
+		"liveDemo": "https://hack-fs.vercel.app/",
+		"hackathonPage": "https://ethglobal.com/showcase/daofactoring-0tuvp",
+		"image": "/img/daofactoring.png",
+		"codeDescription": {
+			"paragraphs": [
+				{
+					"text": "DAO factoring app to allow daos to issue invoices to clients and sell the ownership of the invoices to increase capital efficiency. Usually when making transactions an invoice is issued, there are no tools in the web3 space that allow companies or daos to sell these invoices to receive liquid $$ on time in exchange for their invoices."
+				},
+				{
+					"text": "This project is made with solidity and hardhat to handle the repayment system. It will be deployed on polygon. Uses IPFS/Filecoin to store metadata and legal documents related to the invoice. We also use ERC1155 tokens to create 'fractional' invoices. We created a subgraph to store and retrieve data to show in our frontend"
+				}
+			]
+		}
+	},
+	{
+		"name": "ChainScore",
+		"link": "hackathons/chainscore",
+		"liveDemo": "https://hack-money.vercel.app/",
+		"hackathonPage": "https://ethglobal.com/showcase/chainscore-jizuu",
+		"image": "/img/chainscore.png",
+		"codeDescription": {
+			"paragraphs": [
+				{
+					"text": "Web3 citizens can't access uncollaterized loans. DAOs could lend their members on an uncollaterized manner in a more efficient and community building way as they have formed a community with a single goal."
+				},
+				{
+					"text": "Uncollaterized loans require a forecast of their probability to be repaid so that the interest rate on it / the whole portfolio can be adjusted. The forecast in TradFi has used the previous loan history of an individual or an assesment of the future earnings potentail, but not long ago there were loan officers who were part of the same community and could use 'alternative' data not only to assess the probability, but also to be alerted of distress signs; the community could then get together to help the individual before a default arises."
+				},
+				{
+					"text": "This project is made using mainly on chain operations. Our smart contracts are divided in 2 main parts: Lending Pool wich holds and moves the assets and the LoanManager that stores and manages the loans, both contracts are upgradeable. One dao can own one or many of these contracts pairs for each token they want to lend. They must use the factory contract to create a pair. We use an ML model that queries data from several subgraphs and other sources to create a probability of how likely is a user to pay a loan. The ML model isnt finished, though. We use a chainlink oracle in the mumbai testnetwork to use this data in future implementations, once the model is well trained with real world data."
+				}
+			]
+		}
+	},
+	{
+		"name": "Share Eth",
+		"link": "hackathons/share_eth",
+		"liveDemo": "https://shareeth.vercel.app/",
+		"hackathonPage": "https://ethglobal.com/showcase/shareeth-4yymo",
+		"image": "/img/share_eth.png",
+		"codeDescription": {
+			"paragraphs": [
+				{
+					"text": "Introducing ShareEth, a hackathon project turned social media app that empowers content creators by enabling them to monetize their work through various income streams. Our primary goals are to ensure security and privacy for both the content and our users, while providing a dynamic and engaging user experience."
+				},
+				{
+					"text": "As we iterate on the project, we aim to achieve maximum decentralization, allowing users to have control over their content, data, and network. Although we are currently considering a centralized server for content privacy, we are actively exploring more decentralized solutions."
+				},
+				{
+					"text": "ShareEth utilizes IPFS/Filecoin to store user-generated content, ensuring a decentralized and reliable storage system. We leverage Lens technology for the majority of the logic behind the social graph, while Superfluid manages the flow of payments for seamless monetization."
+				},
+				{
+					"text": "For enhanced user engagement, we've integrated EPNS to deliver a more dynamic and personalized experience. Our team is constantly researching ways to make content private and secure, with options such as encryption or utilizing a private IPFS network under consideration."
+				},
+				{
+					"text": "Join ShareEth today and take control of your content and earnings in a secure and decentralized social media platform."
+				}
+			]
+		}
+	}
+]

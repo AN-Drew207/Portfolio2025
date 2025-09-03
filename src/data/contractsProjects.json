@@ -1,0 +1,181 @@
+[
+	{
+		"name": "Enders Gate Marketplace",
+		"contractName": "ClockSaleMultiTokens.sol",
+		"link": "projects/contract/eg_marketplace",
+		"image": "/img/eg_marketplace.png",
+		"code": "https://polygonscan.com/address/0x71bA14e545014899b990bb5Ee36dB47Aebc12b01#code",
+		"repo": "https://github.com/5HeadGames/EndersGate_marketplace/blob/main/Contracts/contracts/ClockSaleMultiTokens.sol",
+		"codeDescription": {
+			"paragraphs": [
+				{
+					"text": "This smart contract, named ClockSaleMultiTokens, is a decentralized marketplace for buying and selling non-fungible tokens (NFTs) using multiple types of ERC20 tokens as payment. It inherits from the OpenZeppelin's Ownable, Pausable, ERC1155Holder, and ReentrancyGuard contracts. The contract uses Chainlink's AggregatorV3Interface to fetch token prices and Hardhat's console library for logging."
+				},
+				{
+					"text": "Key features of the ClockSaleMultiTokens contract:",
+					"subTexts": [
+						"It maintains a mapping of token IDs to their corresponding sales and a mapping of token addresses to price feed addresses.",
+						"The contract owner can set a fee that they receive for each sale, which is calculated as a percentage of the total sale price.",
+						"The contract allows NFTs to be listed for sale with a specified price in USD, a list of accepted ERC20 tokens for payment, and a sale duration.",
+						"Buyers can purchase NFTs with their chosen ERC20 token, provided that the token is accepted by the seller.",
+						"The contract supports batch buying of multiple NFTs in one transaction.",
+						"Sellers can cancel their sales, and the contract owner can stop and restart trading in the marketplace.",
+						"The contract has a feature for emergency withdrawal of funds."
+					]
+				},
+				{
+					"text": "Events emitted by the contract include SaleCreated, SaleSuccessful, BuySuccessful, SaleCancelled, and ChangedFeeReceiver."
+				},
+				{
+					"text": "The constructor takes the fee receiver's address, wrapped currency address, price feed address for wrapped currency, decimals for wrapped currency, and owner's cut as arguments. It ensures that the owner's cut is less than or equal to 100%."
+				},
+				{
+					"text": "The contract supports batch buying of multiple NFTs in one transaction."
+				},
+				{
+					"text": "Some important functions in the contract are:",
+
+					"subTexts": [
+						"createSale: allows users to list their NFTs for sale by specifying the NFT address, token ID, price in USD, accepted tokens, amount, and duration.",
+						"buy and buyBatch: allows users to buy NFTs listed for sale using their chosen ERC20 token.",
+						"cancelSale: allows sellers to cancel their sales.",
+						"setNftAllowed: allows the contract owner to specify which NFT contracts are allowed in the marketplace.",
+						"stopTrading and restartTrading: allows the contract owner to pause and unpause the marketplace.",
+						"addToken: allows the contract owner to add a new ERC20 token and its associated price feed and decimals.",
+						"emergencyWithdraw: allows the contract owner to withdraw funds in case of an emergency."
+					]
+				}
+			]
+		}
+	},
+	{
+		"name": "Enders Gate Packs Shop",
+		"contractName": "ClockSaleOwnable.sol",
+		"link": "/contracts/eg_shop",
+		"code": "https://polygonscan.com/address/0xB72b9223FE8862B8a29919b18c552F30085787ad#code",
+		"repo": "https://github.com/5HeadGames/EndersGate_marketplace/blob/main/Contracts/contracts/ClockSaleOwnable.sol",
+		"image": "/img/shop.png",
+		"codeDescription": {
+			"paragraphs": [
+				{
+					"text": "This is a smart contract named ClockSaleOwnable for a marketplace to facilitate the sale of non-fungible tokens (NFTs). It is built using the Solidity programming language and is based on the OpenZeppelin contracts and Chainlink. It is also an ERC1155 contract, which allows the trading of multiple NFT types within a single contract."
+				},
+				{
+					"text": "Key features of this smart contract include:",
+					"subTexts": [
+						"The contract is Ownable, Pausable, ERC1155Holder, and ReentrancyGuard, which provide the contract with ownership functionality, the ability to be paused, the capability to hold ERC1155 tokens, and protection against reentrancy attacks, respectively.",
+						"The ClockSaleOwnable constructor requires the fee receiver, wrapped currency, wrapped currency price feed, decimals, and owner cut as arguments. The constructor sets various contract properties, such as the fee receiver, genesis block, wrapped currency, price feeds, and decimals for tokens.",
+						"The contract allows the owner to create sales by specifying the NFT address, token ID, price in USD, accepted tokens, amount, and duration. The sale is represented by a struct called Sale with various attributes.",
+						"The contract includes functions to buy NFTs, either individually or in batches, using specified tokens.",
+						"The contract allows the owner to cancel a sale, update the sale price, and update the sale receiver.",
+						"The contract provides functions to add, remove, or check if an NFT contract is allowed in the marketplace.",
+						"The contract allows the owner to stop and restart trading.",
+						"The contract includes a function to perform an emergency withdrawal of funds in case of any issues.",
+						"The contract emits various events to track the creation, success, and cancellation of sales, as well as successful buys and changes in the fee receiver."
+					]
+				},
+				{
+					"text": "This smart contract can be used to create a marketplace for trading NFTs, with support for different tokens and customizable fees. The marketplace also provides various features for managing sales, adjusting pricing, and maintaining a secure trading environment."
+				}
+			]
+		}
+	},
+	{
+		"name": "DAO Factoring Smart Contracts",
+		"image": "/img/daofactoring.png",
+		"link": "projects/contract/dao_factoring",
+		"contractName": "Factoring.sol",
+
+		"code": "https://mumbai.polygonscan.com/address/0xB6B0B7Df32a6d6a1c5D4Ac6E92281434571e59F0#code",
+
+		"codeDescription": {
+			"paragraphs": [
+				{
+					"text": "DAO factoring app to allow daos to issue invoices to clients and sell the ownership of the invoices to increase capital efficiency. Usually when making transactions an invoice is issued, there are no tools in the web3 space that allow companies or daos to sell these invoices to receive liquid $$ on time in exchange for their invoices. "
+				},
+				{
+					"text": "This project is made with solidity and hardhat to handle the repayment system. It will be deployed on polygon. Uses IPFS/Filecoin to store metadata and legal documents related to the invoice. We also use ERC1155 tokens to create 'fractional' invoices. We created a subgraph to store and retrieve data to show in our frontend"
+				},
+				{
+					"text": "Factoring Contract:",
+					"subTexts": [
+						"The Factoring contract appears to be related to invoice factoring on the Ethereum blockchain.",
+						"It allows setting a discount rate for invoices.",
+						"It calculates the price of invoice fractions based on the principal amount and periods.",
+						"It provides functions for creating, approving, buying, and repaying invoices.",
+						"It has role-based access control to restrict specific actions to authorized parties.",
+						"It interacts with an Invoice contract. This contract is responsible for handling ERC-1155 tokens representing invoices."
+					]
+				},
+				{
+					"text": "Invoice Contract:",
+					"subTexts": [
+						"The Invoice contract implements the ERC-1155 standard and is designed for managing and minting invoice-related tokens.",
+						"It supports the minting and burning of ERC-1155 tokens.",
+						"It defines roles for URI setting, minting, and factoring, allowing access control over these functions.",
+						"It sets the base URI for generating token metadata URIs.",
+						"It interacts with an external contract implementing the IInvoice interface, which is likely responsible for defining the structure of invoice-related ERC-1155 tokens."
+					]
+				}
+			]
+		}
+	},
+	{
+		"name": "Mezcal Bottle Collection",
+		"contractName": "BottleCollection.sol",
+		"link": "/contracts/bottle_collection",
+		"code": "https://mumbai.polygonscan.com/address/0xB6B0B7Df32a6d6a1c5D4Ac6E92281434571e59F0#code",
+		"image": "/img/coco.png",
+		"codeDescription": {
+			"paragraphs": [
+				{
+					"text": "The provided smart contract, MezcalCollection, represents a collection of NFTs (Non-Fungible Tokens) based on the ERC721 standard. The contract inherits from multiple OpenZeppelin contracts, such as ERC721, ERC721URIStorage, Pausable, AccessControl, and Ownable, which provide various functionalities."
+				},
+				{
+					"text": "The main features of the contract are:",
+					"subTexts": [
+						"NFT minting: The contract allows users to buy NFTs by calling the buy function. The price can be paid using the main cryptocurrency of the blockchain or other allowed tokens like USDC. The contract keeps track of the tokens owned by each address.",
+						"Token pricing: The contract uses Chainlink's price feed to obtain the price of the main cryptocurrency in USD. The price of the NFT in USD can be set by an authorized user.",
+						"Access control: The contract uses roles to control access to various functions like pausing/unpausing the minting process, modifying the base URI, setting the price feed address, and withdrawing funds.",
+						"Transfer functionality: The contract allows NFT transfers between users while keeping track of the tokens owned by each address.",
+						"Base URI management: The contract has a base URI which is used to build the token URI for each NFT. Authorized users can update the base URI.",
+						"Withdrawal of funds: Authorized users can withdraw the collected funds in either the main cryptocurrency or allowed tokens like USDC.",
+						"Support for ERC20 tokens: The contract can work with ERC20 tokens for payments and withdrawals.",
+						"Total supply: The contract has a total supply of NFTs set during deployment, which can't be changed afterwards. The contract mints all the NFTs to itself during deployment and transfers them to buyers when they buy NFTs."
+					]
+				}
+			]
+		}
+	},
+	{
+		"name": "Enders Pass Pack Collection",
+		"contractName": "ERC721SeaDrop.sol",
+		"link": "/contracts/eg_pass_packs",
+		"code": "https://polygonscan.com/address/0x066623b54b622f2e40bf077aee8d85be40d35361#code",
+		"image": "/img/CommonPass.png",
+		"codeDescription": {
+			"paragraphs": [
+				{
+					"text": "This Solidity contract, named ERC721SeaDrop, is an implementation of a Non-Fungible Token (NFT) contract based on the ERC721 standard. It includes additional functionality for 'SeaDrop', which is a mechanism for distributing NFTs. The contract imports and utilizes other libraries and contracts, such as ReentrancyGuard, IERC165, and DefaultOperatorFilterer."
+				},
+				{
+					"text": "The main functionality of the contract includes:",
+					"subTexts": [
+						"Constructor: Initializes the contract with a name, symbol, and an array of allowed SeaDrop addresses.",
+						"mintSeaDrop: Mints a specific quantity of tokens for a minter address, ensuring the allowed SeaDrop contract and max supply constraints are not violated.",
+						"updateAllowedSeaDrop: Allows the owner to update the list of allowed SeaDrop contracts.",
+						"getOwnerTokens: Returns an array of token IDs owned by a specific address.",
+						"updatePublicDrop, updateAllowList, updateTokenGatedDrop, updateDropURI, updateCreatorPayoutAddress, updateAllowedFeeRecipient, updateSignedMintValidationParams, updatePayer: Functions for updating various SeaDrop parameters.",
+						"getMintStats: Returns the number of tokens minted by an address, the current total supply, and the maximum supply.",
+						"supportsInterface: Determines if the contract supports a specific interface ID.",
+						"setApprovalForAll, approve: Functions for setting and updating operator approvals, with additional checks for allowed operators.",
+						"transferFrom, safeTransferFrom: Functions for transferring tokens between addresses, with additional checks for allowed operators and updates to the ownerTokens mapping."
+					]
+				},
+				{
+					"text": "Note that this contract uses several modifiers and internal functions to ensure that only allowed SeaDrop contracts, the owner, or the contract itself can call specific functions. Additionally, it keeps track of the owner's tokens using the ownerTokens mapping."
+				}
+			]
+		}
+	}
+]

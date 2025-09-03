@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Shhh Spirits Shopify",
+    "link": "projects/web2/shhh_spirits_shopify",
+    "liveDemo": "https://shhhspirits.myshopify.com/",
+    "image": "/img/shhh_spirits_shopify.png",
+    "images": [
+      "/img/shh_spirits_shopify/1.png",
+      "/img/shh_spirits_shopify/2.png",
+      "/img/shh_spirits_shopify/3.png",
+      "/img/shh_spirits_shopify/4.png"
+    ],
+    "description": "ShhhSpirits is a platform that not only transports you to the world of ultra-premium Mezcal but also provides a unique marketplace where you can purchase bottles intimately connected to ShhhSpirits. Lovingly crafted in Oaxaca, Mexico, our extraordinary and delectable liquid holds a secret SOUL infused within each bottle, which can only be revealed to its rightful owner. A spirit that embodies another spirit, acting as a guardian and reflecting your uniqueness.",
+    "codeDescription": {
+      "paragraphs": [
+        {
+          "text": "ShhhSpirits is a platform that not only transports you to the world of ultra-premium Mezcal but also provides a unique marketplace where you can purchase bottles intimately connected to ShhhSpirits. Lovingly crafted in Oaxaca, Mexico, our extraordinary and delectable liquid holds a secret SOUL infused within each bottle, which can only be revealed to its rightful owner. A spirit that embodies another spirit, acting as a guardian and reflecting your uniqueness."
+        },
+        {
+          "text": "On our Shop, you can explore a diverse selection of ShhhSpirits bottles, each with its own distinct character and charm. Browse through the various offerings, learning about the production techniques, flavor profiles, and the artisans behind each creation. Our user-friendly interface makes it easy to find the perfect bottle to match your taste or to gift to someone special."
+        },
+        {
+          "text": "Embark on a journey with ShhhSpirits, a platform that offers more than just Mezcal. Delve into the enchanting secret SOUL of our Mezcal, and immerse yourself in a one-of-a-kind experience while exploring a curated marketplace designed for true connoisseurs."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Bottlebits Dashboard",
+    "link": "projects/web2/shhh_spirits",
+    "image": "/img/shhh_spirits.png",
+    "images": [
+      "/img/shh_spirits/1.png",
+      "/img/shh_spirits/2.png",
+      "/img/shh_spirits/3.png",
+      "/img/shh_spirits/4.png",
+      "/img/shh_spirits/5.png",
+      "/img/shh_spirits/6.png",
+      "/img/shh_spirits/7.png",
+      "/img/shh_spirits/8.png",
+      "/img/shh_spirits/9.png"
+    ],
+    "description": "Shhh Spirits is a platform where users can look at their NFTs related to Shhh and buy Shhh Spirits products by using a Shopify Store by and easy and secure purchase process.",
+    "codeDescription": {
+      "paragraphs": [
+        {
+          "text": "ShhhSpirits is a platform that not only transports you to the world of ultra-premium Mezcal but also provides a unique marketplace where you can purchase bottles intimately connected to ShhhSpirits. Lovingly crafted in Oaxaca, Mexico, our extraordinary and delectable liquid holds a secret SOUL infused within each bottle, which can only be revealed to its rightful owner. A spirit that embodies another spirit, acting as a guardian and reflecting your uniqueness."
+        },
+        {
+          "text": "On our Shop, you can explore a diverse selection of ShhhSpirits bottles, each with its own distinct character and charm. Browse through the various offerings, learning about the production techniques, flavor profiles, and the artisans behind each creation. Our user-friendly interface makes it easy to find the perfect bottle to match your taste or to gift to someone special."
+        },
+        {
+          "text": "Embark on a journey with ShhhSpirits, a platform that offers more than just Mezcal. Delve into the enchanting secret SOUL of our Mezcal, and immerse yourself in a one-of-a-kind experience while exploring a curated marketplace designed for true connoisseurs."
+        }
+      ]
+    }
+  }
+]
