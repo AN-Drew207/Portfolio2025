@@ -80,7 +80,7 @@ export const Projects = () => {
         >
           {Projects.map(({ name, link, image, description }) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={name}>
                 <div className="px-1">
                   <ProjectItem
                     name={name}

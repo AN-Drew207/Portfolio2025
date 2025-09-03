@@ -1,6 +1,5 @@
 import * as React from "react";
 import { keyframes } from "@emotion/react";
-import Typewriter from "typewriter-effect";
 
 import { MainScreen } from "@/components/home/MainScreen";
 import { About } from "@/components/home/About";

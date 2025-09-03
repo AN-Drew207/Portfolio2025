@@ -1,14 +1,11 @@
-import clsx from "clsx";
+/* eslint-disable @next/next/no-img-element */
 import { ProjectItem } from "@/components/projects/ProjectItem";
-import web2Projects from "@/data/web2Projects.json";
 import web3Projects from "@/data/web3Projects.json";
 
 import * as React from "react";
 import Typewriter from "typewriter-effect";
 
 const Projects = () => {
-  const [section, setSection] = React.useState("web2");
-
   return (
     <div className="min-h-screen flex flex-col items-center py-28 bg-gray-900 gap-20 relative">
       <div className="w-full h-full bg-white fixed top-0 left-0 opacity-[0.25]"></div>
@@ -39,9 +36,10 @@ const Projects = () => {
       </h2>
 
       <div className="flex flex-wrap items-center justify-center md:gap-x-12 gap-x-4 md:gap-y-8 gap-y-4 px-4 w-full">
-        {web3Projects.map(({ name, description, link, image }, e) => {
+        {web3Projects.map(({ name, description, link, image }) => {
           return (
             <ProjectItem
+              key={name}
               name={name}
               link={link}
               image={image}

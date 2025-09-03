@@ -1,4 +1,6 @@
-import { ArrowLeftIcon, ChevronLeftIcon } from "@heroicons/react/outline";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @next/next/no-img-element */
+import { ChevronLeftIcon } from "@heroicons/react/outline";
 import clsx from "clsx";
 import web3Projects from "@/data/web3Projects.json";
 import Link from "next/link";
@@ -11,7 +13,7 @@ import { Autoplay, Navigation, Pagination, Zoom } from "swiper";
 
 const Project = () => {
   const { query } = useRouter();
-  const project: any = web3Projects.find((contract, i) =>
+  const project: any = web3Projects.find((contract) =>
     contract.link.includes(query.project?.toString() || ""),
   );
 
@@ -67,12 +69,16 @@ const Project = () => {
         className="mySwiper md:w-[75%] w-full rounded-xl"
         spaceBetween={10}
       >
-        {(project as any)?.images?.map((item: any) => (
-          <SwiperSlide className="w-full sm:min-w-[450px] min-w-[300px]">
+        {(project as any)?.images?.map((item: any, i: number) => (
+          <SwiperSlide
+            key={"slide-" + i}
+            className="w-full sm:min-w-[450px] min-w-[300px]"
+          >
             <div className="w-full flex items-center justify-center">
               <img
                 className="cursor-pointer w-full rounded-xl"
                 src={item}
+                alt=""
               ></img>
             </div>
           </SwiperSlide>
@@ -91,9 +97,12 @@ const Project = () => {
       </a>
       <div className="flex flex-col gap-8 items-center justify-center md:w-[75%] w-full relative">
         {(project as any)?.codeDescription?.paragraphs?.map(
-          (paragraph: any) => {
+          (paragraph: any, i: any) => {
             return (
-              <p className="text-lg text-white text-justify font-[500] w-full">
+              <p
+                key={i}
+                className="text-lg text-white text-justify font-[500] w-full"
+              >
                 {paragraph.text}
               </p>
             );

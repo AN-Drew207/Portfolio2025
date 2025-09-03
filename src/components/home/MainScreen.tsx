@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import clsx from "clsx";
 import { customAnimation } from "@/pages";
 import { Reveal } from "react-awesome-reveal";

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from "react";
 import type { AppProps } from "next/app";
 import clsx from "clsx";
