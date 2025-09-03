@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="flex md:flex-row flex-col items-center justify-between gap-4 sm:px-16 px-8 w-full">
         <h2 className="text-center sm:text-xl text-md font-[450]">
           {"< "}Connect with{" "}
-          <span className="text-[#a61816] !text-[21px] !font-[600]"> us</span>
+          <span className="text-[#a61816] !text-[21px] !font-[600]"> me</span>
           {" />"}
         </h2>
         <div className="space-x-4">
