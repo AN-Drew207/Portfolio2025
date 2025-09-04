@@ -36,7 +36,7 @@ const Projects = () => {
       </h2>
 
       <div className="flex flex-wrap items-center justify-center md:gap-x-12 gap-x-4 md:gap-y-8 gap-y-4 px-4 w-full">
-        {web3Projects.map(({ name, description, link, image }) => {
+        {web3Projects.map(({ name, description, link, image, prize }) => {
           return (
             <ProjectItem
               key={name}
@@ -45,6 +45,7 @@ const Projects = () => {
               image={image}
               description={description}
               hover
+              havePrize={prize}
             />
           );
         })}

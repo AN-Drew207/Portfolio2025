@@ -25,9 +25,9 @@ const Project = () => {
         className="w-full h-full fixed top-0 left-0 opacity-[0.15]"
         alt=""
       />
-      <div className="absolute top-28 md:left-16 left-10 text-[#000]">
+      <div className="absolute top-28 md:left-16 left-10 text-white">
         <Link href={"/projects"}>
-          <ChevronLeftIcon className="w-8 cursor-pointer" />
+          <ChevronLeftIcon className="w-10 cursor-pointer" />
         </Link>
       </div>
       <h2 className="flex gap-1 text-center text-white md:text-4xl text-xl titleLogo  font-[600] whitespace-nowrap relative">

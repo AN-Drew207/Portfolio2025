@@ -53,6 +53,7 @@ export const MainScreen = () => {
       </div>
       <a
         href="https://www.linkedin.com/company/ac-it-company"
+        target="_blank"
         className={clsx(
           "absolute bottom-10 mx-auto left-0 right-0 w-40 text-center hover:!text-[#000] hover:bg-white md:text-xl text-sm font-[450] px-4 py-2 rounded-md border border-[#000] cursor-pointer",
           "!text-white bg-[#000] transition-all duration-500",
