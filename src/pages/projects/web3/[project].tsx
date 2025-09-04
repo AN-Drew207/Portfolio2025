@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @next/next/no-img-element */
-import { ChevronLeftIcon } from "@heroicons/react/outline";
+import { ArrowSmLeftIcon, ChevronLeftIcon } from "@heroicons/react/outline";
 import clsx from "clsx";
 import web3Projects from "@/data/web3Projects.json";
 import Link from "next/link";
@@ -26,8 +26,8 @@ const Project = () => {
         alt=""
       />
       <div className="absolute top-28 md:left-16 left-10 text-white">
-        <Link href={"/projects"}>
-          <ChevronLeftIcon className="w-10 cursor-pointer" />
+        <Link href={"/projects"} className="flex items-center justify-center">
+          <ChevronLeftIcon className="w-6 cursor-pointer" /> Back
         </Link>
       </div>
       <h2 className="flex gap-1 text-center text-white md:text-4xl text-xl titleLogo  font-[600] whitespace-nowrap relative">
