@@ -1,7 +1,7 @@
 import Typewriter from "typewriter-effect";
 import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Zoom } from "swiper";
+import { Autoplay, Zoom, Navigation } from "swiper";
 import Link from "next/dist/client/link";
 import { ProjectItem } from "@/components/projects/ProjectItem";
 
@@ -79,9 +79,10 @@ export const Projects = () => {
             delay: 3000,
             disableOnInteraction: false,
           }}
+          navigation
           loop={true}
           spaceBetween={10}
-          modules={[Zoom, Autoplay]}
+          modules={[Zoom, Autoplay, Navigation]}
         >
           {Projects.map(({ name, link, image, description }) => {
             return (
