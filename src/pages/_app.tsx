@@ -18,6 +18,7 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import AppLayout from "@/components/common/Layouts";
 import Footer from "@/components/common/Layouts/footer";
+import "tippy.js/dist/tippy.css"; // Para los estilos básicos
 /* import { Images } from 'consts'; */
 function MyApp({
   Component,

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @next/next/no-img-element */
+import Tippy from "@tippyjs/react";
 import clsx from "clsx";
 import Link from "next/link";
 import * as React from "react";
@@ -28,7 +29,11 @@ export const ProjectItem: React.FC<any> = ({
       >
         <img src={image} className="w-full" alt="" />
         <div className="absolute w-full h-full bg-[#00000066]"></div>
-        {havePrize && <p className="absolute top-4 right-4 text-3xl">🥇</p>}
+        {havePrize && (
+          <Tippy content={havePrize}>
+            <p className="absolute top-4 right-4 text-3xl">🥇</p>
+          </Tippy>
+        )}
         <div className="flex flex-col md:p-4 p-2 md:gap-2 gap-1 items-center justify-center absolute bottom-0 bg-[#000000dd] w-full">
           <div className="flex items-center justify-center md:text-2xl text-sm text-[#b10600] font-[500] subTitleMain">
             {name}

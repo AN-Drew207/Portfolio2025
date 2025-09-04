@@ -53,7 +53,7 @@ const Project = () => {
       </h2>
 
       {project.prize ? (
-        <h3 className="subTitleMain text-yellow-400 text-2xl relative">
+        <h3 className="subTitleMain text-yellow-300 text-[28px] relative">
           🥇 {project.prize} 🥇
         </h3>
       ) : (
