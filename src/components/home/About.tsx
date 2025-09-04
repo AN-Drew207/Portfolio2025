@@ -6,7 +6,12 @@ export const About = () => {
       className="flex md:flex-row flex-col items-center justify-center w-full pb-64 pt-48 md:px-36 px-10 gap-16 relative bg-white"
       id="about"
     >
-      <div className="flex flex-col items-center gap-6 md:w-1/2 w-full">
+      <img
+        className="absolute w-full h-full top-0 left-0 opacity-100"
+        src="/img/bgAboutUs.png"
+        alt=""
+      />
+      <div className="flex flex-col items-center gap-6 md:w-1/2 w-full relative">
         <h2 className="flex text-center md:text-4xl text-2xl titleLogo text-primary whitespace-nowrap">
           <span className="text-[#000] font-bold pr-2">{"< "}</span>
           <Typewriter
@@ -44,7 +49,7 @@ export const About = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center md:w-1/2 w-full">
+      <div className="flex flex-col items-center justify-center md:w-1/2 w-full relative">
         <img src="/logos/acblack.png" className="md:w-2/3" alt="" />
       </div>
     </div>

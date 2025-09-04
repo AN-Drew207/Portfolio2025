@@ -46,8 +46,13 @@ export const Projects = () => {
   ];
 
   return (
-    <div className="flex flex-col bg-[#1a1a1a] justify-center items-center w-full py-24 xl:px-36 md:px-10 sm:px-8 px-2 gap-16">
-      <h2 className="flex text-center  md:text-4xl text-2xl titleLogo text-primary whitespace-nowrap">
+    <div className="flex flex-col bg-[#1a1a1a] justify-center items-center w-full py-24 xl:px-36 md:px-10 sm:px-8 px-2 gap-16 relative">
+      <img
+        className="absolute w-full h-full top-0 left-0 opacity-10"
+        src="/img/bgProjects.png"
+        alt=""
+      />{" "}
+      <h2 className="flex text-center  md:text-4xl text-2xl titleLogo text-primary whitespace-nowrap relative">
         <span className="text-white font-bold pr-2">{"< "}</span>
         <Typewriter
           onInit={(typewriter) => {
@@ -67,7 +72,7 @@ export const Projects = () => {
         />
         <span className="text-white font-bold">{" / >"}</span>
       </h2>
-      <div className="lg:!w-2/3 w-full">
+      <div className="lg:!w-2/3 w-full relative">
         <Swiper
           slidesPerView={1}
           autoplay={{
@@ -94,7 +99,7 @@ export const Projects = () => {
           })}
         </Swiper>
       </div>
-      <Link href={"/projects"}>
+      <Link href={"/projects"} className="relative">
         <div
           className={clsx(
             "text-center text-white md:text-xl text-sm font-[450] px-4 py-2 rounded-md border border-white cursor-pointer w-54",

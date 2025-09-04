@@ -8,10 +8,10 @@ import Typewriter from "typewriter-effect";
 const Projects = () => {
   return (
     <div className="min-h-screen flex flex-col items-center py-28 bg-gray-900 gap-20 relative">
-      <div className="w-full h-full bg-white fixed top-0 left-0 opacity-[0.25]"></div>
+      <div className="w-full h-full bg-black fixed top-0 left-0 opacity-[0.5]"></div>
       <img
         src="img/bgPortfolio.png"
-        className="fixed top-0 left-0 h-full w-[125vw] opacity-[0.75]"
+        className="fixed top-0 left-0 h-full w-[125vw] opacity-[0.5]"
         alt=""
       />
       <h2 className="flex text-center md:text-5xl text-xl titleLogo text-primary whitespace-nowrap relative">

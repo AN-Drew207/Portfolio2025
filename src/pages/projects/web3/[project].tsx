@@ -22,7 +22,7 @@ const Project = () => {
       <div className="w-full h-full bg-black fixed top-0 left-0 opacity-[0.30]"></div>
       <img
         src={project?.image}
-        className="w-full h-full fixed top-0 left-0 opacity-[0.25]"
+        className="w-full h-full fixed top-0 left-0 opacity-[0.15]"
         alt=""
       />
       <div className="absolute top-28 md:left-16 left-10 text-[#000]">
@@ -51,6 +51,14 @@ const Project = () => {
         />
         <span className="text-white">{" />"}</span>
       </h2>
+
+      {project.prize ? (
+        <h3 className="subTitleMain text-yellow-400 text-2xl relative">
+          🥇 {project.prize} 🥇
+        </h3>
+      ) : (
+        ""
+      )}
 
       <Swiper
         slidesPerView={1}
@@ -84,17 +92,32 @@ const Project = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <a
-        href={(project as any)?.liveDemo}
-        target="_blank"
-        className={clsx(
-          "relative text-center !text-white md:text-xl text-sm font-[450] px-4 py-2 rounded-xl border border-white cursor-pointer w-54",
-          "hover:!text-[#000] hover:bg-white transition-all duration-500",
+      <div className="w-full flex gap-5 justify-center">
+        {(project as any)?.showcaseLink ? (
+          <a
+            href={(project as any)?.showcaseLink}
+            target="_blank"
+            className={clsx(
+              "relative text-center !text-white md:text-xl text-sm font-[450] px-4 py-2 rounded-md border border-white cursor-pointer w-54",
+              "hover:!text-[#000] hover:bg-white transition-all duration-500",
+            )}
+          >
+            Project Showcase
+          </a>
+        ) : (
+          ""
         )}
-      >
-        Live Demo
-      </a>
+        <a
+          href={(project as any)?.liveDemo}
+          target="_blank"
+          className={clsx(
+            "relative text-center !text-white md:text-xl text-sm font-[450] px-4 py-2 rounded-md border border-white cursor-pointer w-54",
+            "hover:!text-[#000] hover:bg-white transition-all duration-500",
+          )}
+        >
+          Live Demo
+        </a>
+      </div>
       <div className="flex flex-col gap-8 items-center justify-center md:w-[75%] w-full relative">
         {(project as any)?.codeDescription?.paragraphs?.map(
           (paragraph: any, i: any) => {
